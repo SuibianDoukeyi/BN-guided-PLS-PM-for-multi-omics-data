@@ -109,7 +109,7 @@ l2_mapped_scores <- l2_map_df %>%
 
 ###1###
 # 读取 L1 的原始补充数据
-l2_l1_sub_df <- read.csv("D:/01文件/001论文/博士论文/05毒性转录代谢/PLSPM/Level 1/l1 sub l101.csv", stringsAsFactors = FALSE)
+l2_l1_sub_df <- read.csv("D:/01文件/001论文/博士论文/05毒性转录代谢/PLSPM/Level 1/l1 sub l1012.csv", stringsAsFactors = FALSE)
 # 提取前两列变量信息
 var_info <- l2_l1_sub_df[, 1:2]
 
