@@ -2,7 +2,7 @@ library(plspm)
 library(tidyverse)
 
 # ==== Step 1: 读取数据 ====
-l2_df <- read.csv("D:/01文件/001论文/博士论文/05毒性转录代谢/PLSPM/Level 2/L2 plspm 82.csv", header = TRUE, check.names = FALSE)
+l2_df <- read.csv("data/L2 plspm 82.csv", header = TRUE, check.names = FALSE)
 
 # ==== Step 2: 提取映射表（潜变量→显变量） ====
 l2_latent_df <- l2_df[, c("type2", "var_id")]  # type2 是潜变量，var_id 是显变量
@@ -96,7 +96,7 @@ l2_lv_scores_final <- as.data.frame(t(l2_plspm_model_final$scores))
 # ==== Step 16: 将潜变量得分映射到 L1 表 ====
 
 # 读取 type1 → type2 对应关系表
-l2_map_df <- read.csv("D:/01文件/001论文/博士论文/05毒性转录代谢/PLSPM/Level 2/L1 latent to L2.csv", stringsAsFactors = FALSE)
+l2_map_df <- read.csv("data/L1 latent to L2.csv", stringsAsFactors = FALSE)
 
 # 转换 lv_scores 行名为列，准备合并
 l2_lv_scores_df <- l2_lv_scores_final %>%
@@ -109,7 +109,7 @@ l2_mapped_scores <- l2_map_df %>%
 
 ###1###
 # 读取 L1 的原始补充数据
-l2_l1_sub_df <- read.csv("D:/01文件/001论文/博士论文/05毒性转录代谢/PLSPM/Level 1/l1 sub l101.csv", stringsAsFactors = FALSE)
+l2_l1_sub_df <- read.csv("data/l1 sub l101.csv", stringsAsFactors = FALSE)
 # 提取前两列变量信息
 var_info <- l2_l1_sub_df[, 1:2]
 
@@ -129,7 +129,7 @@ l2_final_l1_data <- bind_rows(l2_l1_sub_scaled, l2_mapped_scores)
 ###下面这几行代码在首次必须运行，避免不scale；然后后“注释”“隐藏”掉，避免二次scale
 
 ###2 先合并再scale
-# l2_l1_sub_df <- read.csv("D:/01文件/001论文/博士论文/05毒性转录代谢/PLSPM/Level 1/l1 sub l101.csv", stringsAsFactors = FALSE)
+# l2_l1_sub_df <- read.csv("data/l1 sub l101.csv", stringsAsFactors = FALSE)
 # l2_final_l1_data <- bind_rows(l2_l1_sub_df, l2_mapped_scores)
 # var_info <- l2_final_l1_data[, 1:2]
 # expr_mat <- l2_final_l1_data[, 3:ncol(l2_final_l1_data)]
