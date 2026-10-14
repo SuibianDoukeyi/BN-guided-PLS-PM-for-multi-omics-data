@@ -129,7 +129,7 @@ l2_final_l1_data <- bind_rows(l2_l1_sub_scaled, l2_mapped_scores)
 ###下面这几行代码在首次必须运行，避免不scale；然后后“注释”“隐藏”掉，避免二次scale
 
 ###2 先合并再scale
-# l2_l1_sub_df <- read.csv("D:/01文件/001论文/博士论文/05毒性转录代谢/PLSPM/Level 1/l1 sub l1012.csv", stringsAsFactors = FALSE)
+# l2_l1_sub_df <- read.csv("D:/01文件/001论文/博士论文/05毒性转录代谢/PLSPM/Level 1/l1 sub l101.csv", stringsAsFactors = FALSE)
 # l2_final_l1_data <- bind_rows(l2_l1_sub_df, l2_mapped_scores)
 # var_info <- l2_final_l1_data[, 1:2]
 # expr_mat <- l2_final_l1_data[, 3:ncol(l2_final_l1_data)]
