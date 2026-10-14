@@ -23,8 +23,6 @@ Raw sequencing and metabolomics data are available at the National Genomics Data
 - R 4.4.2
 - R packages: plspm, plspm2, bnlearn, Rgraphviz, igraph, qgraph, sna, tidygraph, ggraph, ggforce, tidyverse (dplyr, tibble, ggplot2, purrr), patchwork, scales, grid
 
-[Package versions: run `sessionInfo()` in R and paste the output here]
-
 ## Usage
 
 1. Download or clone this repository.
