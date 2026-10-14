@@ -2,7 +2,7 @@
 
 R code for Bayesian network-guided partial least squares path modeling (BN-guided PLS-PM) used in:
 
-> Lin, K., Liu, Y., et al. An endogenous Fenton-like route for enrofloxacin degradation shares an oxidative node with hormesis in a macroalgal holobiont. (Submitted to *Environment International*)
+> Lin, Kun; Liu, Yong; et al. An endogenous Fenton-like route for enrofloxacin degradation shares an oxidative node with hormesis in a macroalgal holobiont. (Manuscript submitted)
 
 ## Repository contents
 
