@@ -31,13 +31,6 @@ Raw sequencing and metabolomics data are available at the National Genomics Data
 
 The script reads all input files from the `data/` folder.
 
-### Scaling of Level 1 data
-
-Lines 110–138 contain two alternative blocks for combining and scaling Level 1 data:
-- Block `###1` (active): scales the directly measured Level 1 indicators, then appends the Level 2-derived module scores.
-- Block `###2` (commented out): appends first, then scales.
-
-Results reported in the manuscript were obtained with Block `###1`. Do not run both blocks in the same session, as this scales the data twice.
 
 ## Troubleshooting
 
