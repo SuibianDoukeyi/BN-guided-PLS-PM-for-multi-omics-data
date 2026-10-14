@@ -1641,12 +1641,12 @@ plots <- lapply(level1_list, plot_three_layer)
 for (p in plots) print(p)
 
 # 设置保存目录
-#output_dir <- "output/Full Outer"
+output_dir <- "output/Full Outer"
 
 # 如果目录不存在，则创建
-# if (!dir.exists(output_dir)) {
-#  dir.create(output_dir, recursive = TRUE)
-# }
+ if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)
+ }
 
 # 自定义保存函数（PDF）
 save_three_layer_plot_pdf <- function(plot_obj, level1_latent, width_mm = 210, height_mm = 210, dpi = 900) {
