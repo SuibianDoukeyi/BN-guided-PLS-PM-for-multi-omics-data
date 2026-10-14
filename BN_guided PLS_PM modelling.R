@@ -1206,7 +1206,7 @@ library(dplyr)
 library(patchwork)
 
 # === 1. 读取并标准化数据 ===
-dose_df <- read.csv("D:/01文件/001论文/博士论文/05毒性转录代谢/PLSPM/Level 1/DoseM.csv", check.names = FALSE)
+dose_df <- read.csv("data/DoseM.csv", check.names = FALSE)
 # 从 pls_plspm_final 提取潜变量得分
 p_lv_scores <- as.data.frame(pls_model_final$scores)
 latent_scores_df <- p_lv_scores
@@ -1660,9 +1660,9 @@ for (p in plots) print(p)
 #output_dir <- "D:/01文件/001论文/博士论文/05毒性转录代谢/Rplot/PLSPM 计算mol/Full Outer"
 
 # 如果目录不存在，则创建
-if (!dir.exists(output_dir)) {
-  dir.create(output_dir, recursive = TRUE)
-}
+# if (!dir.exists(output_dir)) {
+#  dir.create(output_dir, recursive = TRUE)
+# }
 
 # 自定义保存函数（PDF）
 save_three_layer_plot_pdf <- function(plot_obj, level1_latent, width_mm = 210, height_mm = 210, dpi = 900) {
